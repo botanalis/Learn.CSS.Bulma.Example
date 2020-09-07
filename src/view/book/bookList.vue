@@ -11,7 +11,7 @@
         </div>
 
         <p class="level-item">
-          <a href="" class="button is-success">New</a>
+          <a href="" class="button is-success" v-on:click.prevent="handleNew">New</a>
         </p>
 
         <div class="level-item is-hidden-tablet-only">
@@ -100,7 +100,9 @@ export default {
 
   },
   methods: {
-
+    handleNew() {
+      this.$router.push({ name: "bookNew" });
+    }
 
   }
 }

@@ -7,6 +7,7 @@ import action from "../view/action";
 import login from "../view/login";
 import dashboard from "../view/home/dashboard";
 import bookList from "../view/book/bookList";
+import bookNew from "../view/book/bookNew";
 import customerList from "../view/customer/customerList";
 import orderList from "../view/order/orderList";
 
@@ -36,7 +37,10 @@ const router = new VueRouter({
                             //清單
                             path: "list", name: "bookList", component: bookList
                         },
-
+                        {
+                            //新增
+                            path: "new", name: "bookNew", component: bookNew
+                        }
                     ]
                 },
                 {
