@@ -51,7 +51,7 @@
             </aside>
             <div class="media-content">
               <p class="title is-5 is-spaced is-marginless">
-                <a href="edit-book.html">{{book.name}}</a>
+                <a v-on:click.self="handleEdit(book)">{{book.name}}</a>
               </p>
               <p class="subtitle is-marginless">
                 ${{book.price}}
@@ -101,9 +101,11 @@ export default {
   },
   methods: {
     handleNew() {
-      this.$router.push({ name: "bookNew" });
+      this.$router.push({ name: "bookEdit", params: { op: "create" } })
+    },
+    handleEdit(item){
+      this.$router.push({ name: 'bookEdit', params: { op: "edit"}, query:{ id: item.id}});
     }
-
   }
 }
 </script>

@@ -7,7 +7,7 @@ import action from "../view/action";
 import login from "../view/login";
 import dashboard from "../view/home/dashboard";
 import bookList from "../view/book/bookList";
-import bookNew from "../view/book/bookNew";
+import bookEdit from "../view/book/bookEdit";
 import customerList from "../view/customer/customerList";
 import orderList from "../view/order/orderList";
 
@@ -38,8 +38,8 @@ const router = new VueRouter({
                             path: "list", name: "bookList", component: bookList
                         },
                         {
-                            //新增
-                            path: "new", name: "bookNew", component: bookNew
+                            //編輯
+                            path: ":op(create|edit)", name: "bookEdit", component: bookEdit
                         }
                     ]
                 },
